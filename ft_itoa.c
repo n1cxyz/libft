@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dasal <dasal@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 16:10:52 by dasal             #+#    #+#             */
-/*   Updated: 2024/04/20 17:12:19 by dasal            ###   ########.fr       */
+/*   Updated: 2024/04/20 23:15:18 by dominicasal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,13 @@ static int	ft_intlen(int n)
 	int	count;
 
 	count = 0;
-	if (n < 0)
-	{
+	if (n <= 0)
 		count++;
-		n *= -1;
-	}
-	while (n > 0)
+	while (n != 0)
 	{
 		n = n / 10;
 		count++;
 	}
-	if (count == 0)
-		count++;
 	return (count);
 }
 
@@ -37,34 +32,34 @@ char	*ft_itoa(int n)
 {
 	char	*result;
 	int		i;
+	long	nb;
 
+	nb = n;
 	i = ft_intlen(n);
 	result = (char *)malloc(sizeof(char) * (i + 1));
 	if (!result)
 		return (NULL);
 	result[i] = '\0';
 	i--;
-	if (n < 0)
+	result[0] = '0';
+	if (nb < 0)
 	{
 		result[0] = '-';
-		n *= -1;
+		nb *= -1;
 	}
-	if (n > 0)
-	{
-		while (i >= 0)
+	while (nb > 0)
 		{
-			result[i] = '0' + (n % 10);
-			n = n / 10;
+			result[i] = '0' + (nb % 10);
+			nb = nb / 10;
 			i--;
 		}
-	}
-	else
-		result[0] = '0';
 	return (result);
 }
-
+/*
 int	main(void)
 {
-	//printf("%s\n", ft_itoa(1337));
-	printf("%s\n", ft_itoa(-42));
+	printf("%s\n", ft_itoa(42));
+	printf("%s\n", ft_itoa(-2147483648));
+	printf("%s\n", ft_itoa(0));
 }
+*/
