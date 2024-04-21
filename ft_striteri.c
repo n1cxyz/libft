@@ -1,41 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 13:58:07 by dasal             #+#    #+#             */
-/*   Updated: 2024/04/21 23:41:35 by dominicasal      ###   ########.fr       */
+/*   Created: 2024/04/21 23:08:36 by dominicasal       #+#    #+#             */
+/*   Updated: 2024/04/21 23:41:09 by dominicasal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <unistd.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t len)
+/*static  void prichari(unsigned int index, char *c)
 {
-	char		*d;
-	const char	*s;
-	char		*lastd;
-	char		*lasts;
-	
-	d = dest;
-	s = src;
-	lastd = d + (len - 1);
-	lasts = s + (len - 1);
-	if (d < s)
-		while (len--)
-		*d++ = *s++;
-	else
+    printf("%u %c\n", index, *c);
+}
+*/
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	int	i;
+
+	i = 0;
+	if (s)
 	{
-		while (len--)
-		*lastd-- = *lasts--;
+		while (s[i] != '\0')
+		{
+			f(i, &s[i]);
+			i++;
+		}
 	}
-	return dest;
 }
 /*
-int	main(void)
-{
-	char	str[] = ""
+int main(void) {
+    char str[] = "hello, world!";
+    ft_striteri(str, prichari);
 }
 */
