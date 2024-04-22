@@ -1,41 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dasal <dasal@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 23:08:36 by dominicasal       #+#    #+#             */
-/*   Updated: 2024/04/22 10:15:19 by dasal            ###   ########.fr       */
+/*   Created: 2024/04/22 10:17:02 by dasal             #+#    #+#             */
+/*   Updated: 2024/04/22 10:25:33 by dasal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
-/*static  void prichari(unsigned int index, char *c)
+void	ft_putchar_fd(char c, int fd)
 {
-    printf("%u %c\n", index, *c);
+	write(fd, &c, 1);
 }
-*/
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+/*  
+int	main(void)
 {
-	int	i;
-
-	i = 0;
-	if (s)
-	{
-		while (s[i] != '\0')
-		{
-			f(i, &s[i]);
-			i++;
-		}
-	}
-}
-/* 
-int main(void)
-{
-    char str[] = "hello, world!";
-    ft_striteri(str, prichari);
+	ft_putchar_fd('H', 1);
+	ft_putchar_fd('A', 2);
 }
  */

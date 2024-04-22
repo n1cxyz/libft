@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
+/*   By: dasal <dasal@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 16:10:52 by dasal             #+#    #+#             */
-/*   Updated: 2024/04/20 23:15:18 by dominicasal      ###   ########.fr       */
+/*   Updated: 2024/04/21 17:00:29 by dasal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,11 @@ char	*ft_itoa(int n)
 		nb *= -1;
 	}
 	while (nb > 0)
-		{
-			result[i] = '0' + (nb % 10);
-			nb = nb / 10;
-			i--;
-		}
+	{
+		result[i] = '0' + (nb % 10);
+		nb = nb / 10;
+		i--;
+	}
 	return (result);
 }
 /*

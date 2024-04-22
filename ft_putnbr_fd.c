@@ -1,41 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dasal <dasal@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 23:08:36 by dominicasal       #+#    #+#             */
-/*   Updated: 2024/04/22 10:15:19 by dasal            ###   ########.fr       */
+/*   Created: 2024/04/22 10:53:16 by dasal             #+#    #+#             */
+/*   Updated: 2024/04/22 11:17:34 by dasal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
-/*static  void prichari(unsigned int index, char *c)
+static void	ft_putchar_fd(char c, int fd)
 {
-    printf("%u %c\n", index, *c);
+	write(fd, &c, 1);
 }
-*/
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
-{
-	int	i;
 
-	i = 0;
-	if (s)
+void	ft_putnbr_fd(int n, int fd)
+{
+	long	nb;
+
+	nb = n;
+	if (nb < 0)
 	{
-		while (s[i] != '\0')
-		{
-			f(i, &s[i]);
-			i++;
-		}
+		ft_putchar_fd('-', 1);
+		nb *= -1;
 	}
+	if (nb > 9)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putchar_fd((nb % 10) + '0', fd);
+	}
+	else
+		ft_putchar_fd((nb + '0'), fd);
 }
 /* 
-int main(void)
+int	main(void)
 {
-    char str[] = "hello, world!";
-    ft_striteri(str, prichari);
+	ft_putnbr_fd(42, 1);
 }
  */
