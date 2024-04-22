@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strdup.c                                           :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dasal <dasal@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 12:12:39 by dasal             #+#    #+#             */
-/*   Updated: 2024/04/19 13:43:05 by dasal            ###   ########.fr       */
+/*   Updated: 2024/04/22 22:19:29 by dominicasal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *str)
 {

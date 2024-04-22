@@ -1,47 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   substr.c                                           :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dasal <dasal@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:19:46 by dasal             #+#    #+#             */
-/*   Updated: 2024/04/20 12:07:35 by dasal            ###   ########.fr       */
+/*   Updated: 2024/04/22 22:31:43 by dominicasal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-static size_t	ft_strlen(char const *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-static size_t	ft_strlcpy(char *dest, char const *src, size_t size)
-{
-	size_t	i;
-	size_t	j;
-
-	j = 0;
-	i = 0;
-	while (src[i] != '\0')
-		i++;
-	if (size == 0)
-		return (i);
-	while (src[j] != '\0' && j < size - 1)
-	{
-		dest[j] = src[j];
-		j++;
-	}
-	dest[j] = '\0';
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

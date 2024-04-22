@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dasal <dasal@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 16:09:23 by dasal             #+#    #+#             */
-/*   Updated: 2024/04/21 16:42:58 by dasal            ###   ########.fr       */
+/*   Updated: 2024/04/22 22:19:18 by dominicasal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static int	word_count(char const *s, char c)
 {
@@ -76,7 +75,7 @@ char	**ft_split(char const *s, char c)
 		while (s[i] != '\0' && s[i] != c)
 			i++;
 	}
-	result[j] = NULL;
+	result[j] = ptr;
 	return (result);
 }
 /* 

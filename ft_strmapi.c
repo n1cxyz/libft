@@ -6,30 +6,19 @@
 /*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 21:27:16 by dominicasal       #+#    #+#             */
-/*   Updated: 2024/04/21 23:15:50 by dominicasal      ###   ########.fr       */
+/*   Updated: 2024/04/22 22:33:56 by dominicasal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
-static size_t	ft_strlen(char const *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-static char	ft_toupper(unsigned int i, char c)
+/*static char	ft_toupper(unsigned int i, char c)
 {
 	if (c > 96 && c < 123)
 		c -= 32;
 	return (c);
 }
-
+*/
 char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*result;

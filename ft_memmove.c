@@ -6,18 +6,18 @@
 /*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:58:07 by dasal             #+#    #+#             */
-/*   Updated: 2024/04/21 23:41:35 by dominicasal      ###   ########.fr       */
+/*   Updated: 2024/04/22 22:18:42 by dominicasal      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
 	char		*d;
 	const char	*s;
 	char		*lastd;
-	char		*lasts;
+	const char		*lasts;
 	
 	d = dest;
 	s = src;
