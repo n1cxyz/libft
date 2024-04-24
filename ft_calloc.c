@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
+/*   By: dasal <dasal@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 11:16:20 by dasal             #+#    #+#             */
-/*   Updated: 2024/04/22 22:17:49 by dominicasal      ###   ########.fr       */
+/*   Updated: 2024/04/24 13:43:13 by dasal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,16 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void			*memory;
 	unsigned char	*ptr;
 
+	if (nmemb && size && nmemb > (UINT_MAX / size))
+		return (NULL);
 	n = nmemb * size;
-	memory = (void *)malloc(n);
+	memory = malloc(n);
 	if (memory == NULL)
 		return (NULL);
 	ptr = (unsigned char *)memory;
 	while (n--)
-		*(unsigned char *)memory++ = 0;
-	return (ptr);
+		*ptr++ = 0;
+	return (memory);
 }
 
 /* int	main(void)

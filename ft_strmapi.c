@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
+/*   By: dasal <dasal@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 21:27:16 by dominicasal       #+#    #+#             */
-/*   Updated: 2024/04/22 22:33:56 by dominicasal      ###   ########.fr       */
+/*   Updated: 2024/04/24 12:59:50 by dasal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 	return (c);
 }
 */
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*result;
 	int		len;

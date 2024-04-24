@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
+/*   By: dasal <dasal@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 22:07:49 by dominicasal       #+#    #+#             */
-/*   Updated: 2024/04/22 22:14:50 by dominicasal      ###   ########.fr       */
+/*   Updated: 2024/04/24 13:28:36 by dasal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <limits.h>
 
 int	ft_isalnum(int c);
 int	ft_isalpha(int c);
