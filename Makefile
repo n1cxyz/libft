@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dasal <dasal@student.42.fr>                +#+  +:+       +#+         #
+#    By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/22 15:40:37 by dominicasal       #+#    #+#              #
-#    Updated: 2024/04/30 14:39:20 by dasal            ###   ########.fr        #
+#    Updated: 2024/04/30 20:23:27 by dominicasal      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,11 @@ SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c \
 	ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c \
 	ft_tolower.c ft_toupper.c
-SRCSB = ft_lstadd_bonus.c ft_lstadd_front.c ft_lstclear_bonus.c\
+SRCSB = ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c\
 	ft_lstdelone_bonus.c ft_lstlast_bonus.c ft_lstnew_bonus.c\
 	ft_lstsize_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 OBJS = ${SRCS:.c=.o}
-OBJSb = ${SRCSB:.c=.o}
+OBJSB = ${SRCSB:.c=.o}
 LIB = ar rcs
 RM = rm -f
 
@@ -34,11 +34,11 @@ ${NAME}: ${OBJS}
 	${LIB} ${NAME} ${OBJS}
 all: ${NAME}
 bonus: ${NAME} ${OBJSB}
-	${LIBC} ${NAME} ${OBJSB}
+	${LIB} ${NAME} ${OBJSB}
 clean:
-	${RM} ${OBJS}
+	${RM} ${OBJS} ${OBJSB}
 fclean: clean
-	${RM} ${NAME}
+	${RM} ${NAME} ${bonus}
 re: fclean all
 
 .PHONY : all bonus clean fclean re
