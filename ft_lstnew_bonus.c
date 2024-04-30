@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dominicasal <dominicasal@student.42.fr>    +#+  +:+       +#+        */
+/*   By: dasal <dasal@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 12:51:49 by dasal             #+#    #+#             */
-/*   Updated: 2024/04/29 13:22:24 by dominicasal      ###   ########.fr       */
+/*   Updated: 2024/04/30 13:58:54 by dasal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
-/* 
-int	main(void)
+
+/* int	main(void)
 {
 	int	num1 = 10;
 	int num2 = 20;
@@ -40,4 +40,4 @@ int	main(void)
 	}
 	else
 		printf("Error");
-} */
+}  */
