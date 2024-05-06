@@ -6,7 +6,7 @@
 /*   By: dasal <dasal@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:58:07 by dasal             #+#    #+#             */
-/*   Updated: 2024/04/24 13:00:50 by dasal            ###   ########.fr       */
+/*   Updated: 2024/05/02 12:35:20 by dasal            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,11 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	return (dest);
 }
 /*
-int	main(void)
-{
-	char	str[] = ""
-}
+int main() {
+    char src[] = "hello, world!";
+    char dest[20];
+    memmove(dest, src, strlen(src) + 1);
+    printf("%s\n", src);
+    printf("%s\n", dest);
+	}
 */
